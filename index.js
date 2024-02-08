@@ -1,13 +1,11 @@
 // Código do desafio do felipao
 
-const prompt = require('prompt-sync')({sigint: true})
-
-let listaHerois = [["Kratos", 9500],["Seya", 6500], ["Duke Nukem", -15], ["Homen-aranha", 1500], ["Homem de Ferro", 2500], ["Shiryu", 7500], ["Wolverine", 8500], ["Thor", 12000]]
+let listaHerois = [["Kratos", 9500],["Seya", 6500], ["Duke Nukem", -15], ["Homen-aranha", 1500], ["Homem de Ferro", 2500], ["Shiryu", 7500], ["Wolverine", 8500], ["Thor", 10001]]
 let nivelEpico = ""
 
 for (let numeroHeroi = 0; numeroHeroi <= listaHerois.length -1 ; numeroHeroi++){
    
-    if (listaHerois[numeroHeroi][1] < 1000) {
+    if (listaHerois[numeroHeroi][1] <= 1000) {
         nivelEpico = "Ferro"
     }
     else if ((listaHerois[numeroHeroi][1] > 1000) && (listaHerois[numeroHeroi][1] <= 2000)) {
