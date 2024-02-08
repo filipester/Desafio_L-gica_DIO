@@ -1,32 +1,36 @@
 // Código do desafio do felipao
 
-let listaHerois = [["Kratos", 9500],["Seya", 7000], ["Duke Nukem", 1500]]
+const prompt = require('prompt-sync')({sigint: true})
+
+let listaHerois = [["Kratos", 9500],["Seya", 6500], ["Duke Nukem", -15], ["Homen-aranha", 1500], ["Homem de Ferro", 2500], ["Shiryu", 7500], ["Wolverine", 8500], ["Thor", 12000]]
 let nivelEpico = ""
 
-if (listaHerois[0][1] <= 1000) {
-    nivelEpico = "Ferro"
-}
-else if ((listaHerois[0][1] > 1000) && (listaHerois[0][1] <= 2000)) {
-    nivelEpico = "Bronze"
-}
-else if ((listaHerois[0][1] > 2000) && (listaHerois[0][1] <= 5000)) {
-    nivelEpico = "Prata"
-}
-else if ((listaHerois[0][1] > 5000) && (listaHerois[0][1] <= 7000)) {
-    nivelEpico = "Ouro"
-}
-else if ((listaHerois[0][1] > 7000) && (listaHerois[0][1] <= 8000)) {
-    nivelEpico = "Platina"
-}
-else if ((listaHerois[0][1] > 8000) && (listaHerois[0][1] <= 9000)) {
-    nivelEpico = "Ascendente"
-}
-else if ((listaHerois[0][1] > 9000) && (listaHerois[0][1] <= 10000)) {
-    nivelEpico = "Imortal"
-}
-else {
-    nivelEpico = "Radiante"
-}
+for (let numeroHeroi = 0; numeroHeroi <= listaHerois.length -1 ; numeroHeroi++){
+   
+    if (listaHerois[numeroHeroi][1] < 1000) {
+        nivelEpico = "Ferro"
+    }
+    else if ((listaHerois[numeroHeroi][1] > 1000) && (listaHerois[numeroHeroi][1] <= 2000)) {
+        nivelEpico = "Bronze"
+    }
+    else if ((listaHerois[numeroHeroi][1] > 2000) && (listaHerois[numeroHeroi][1] <= 5000)) {
+        nivelEpico = "Prata"
+    }
+    else if ((listaHerois[numeroHeroi][1] > 5000) && (listaHerois[numeroHeroi][1] <= 7000)) {
+        nivelEpico = "Ouro"
+    }
+    else if ((listaHerois[numeroHeroi][1] > 7000) && (listaHerois[numeroHeroi][1] <= 8000)) {
+        nivelEpico = "Platina"
+    }
+    else if ((listaHerois[numeroHeroi][1] > 8000) && (listaHerois[numeroHeroi][1] <= 9000)) {
+        nivelEpico = "Ascendente"
+    }
+    else if ((listaHerois[numeroHeroi][1] > 9000) && (listaHerois[numeroHeroi][1] <= 10000)) {
+        nivelEpico = "Imortal"
+    }
+    else {
+        nivelEpico = "Radiante"
+    }
+    console.log("O herói de nome " + listaHerois[numeroHeroi][0] + " está no nível de " + nivelEpico)
+} 
 
-
-console.log("O herói de nome " + listaHerois[0][0] + " está no nível de " + nivelEpico)
