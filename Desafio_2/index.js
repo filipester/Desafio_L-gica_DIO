@@ -8,13 +8,14 @@ let listaRankeada = []
 
 let nivelEpico = ""
 
+// laço que cria uma lista rankeada com o nome do herói e seu saldo de vitórias
 for (let numeroHeroi = 0; numeroHeroi <= listaHerois.length -1; numeroHeroi++) {
     listaRankeada[numeroHeroi] = ([listaHerois[numeroHeroi][0],calcularSaldoVitorias(listaHerois[numeroHeroi][1],listaHerois[numeroHeroi][2])])
     //console.log(listaRankeada[numeroHeroi][0] + "  , " + listaRankeada[numeroHeroi][1])
 }
 
 
-
+// laço que avalia o nível de vitórias e confere o nível de herói, e imprime seu nome, saldo e nível
 for (let numeroHeroi = 0; numeroHeroi <= listaHerois.length -1; numeroHeroi++){
    
     if (listaRankeada[numeroHeroi][1] <= 10) {
@@ -43,7 +44,7 @@ for (let numeroHeroi = 0; numeroHeroi <= listaHerois.length -1; numeroHeroi++){
 
 
 
-
+// função para o cálculo de saldo
 function calcularSaldoVitorias(vitorias, derrotas) {
     return vitorias - derrotas
 }
